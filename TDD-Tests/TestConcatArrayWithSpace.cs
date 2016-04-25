@@ -3,18 +3,29 @@ using TDD_Homework;
 
 namespace TDD_Tests
 {
-	[TestClass]
-	public class TestConcatArrayWithSpace
-	{
-		[TestMethod]
-		public void Test__Concatenates_String_Array()
-		{
-			string[] input = {"Sju", "sjösjuka", "sjömän"};
-			string expected = "Sju sjösjuka sjömän";
+    [TestClass]
+    public class TestConcatArrayWithSpace
+    {
+        [TestMethod]
+        public void Test__Concatenates_String_Array()
+        {
+            string[] input  = {"Sju", "sjösjuka", "sjömän"};
+            string expected = "Sju sjösjuka sjömän";
 
-			string result = StringUtils.ConcatArrayWithSpace(input);
+            string result = StringUtils.ConcatArrayWithSpace(input);
 
-			Assert.AreEqual(expected, result);
-		}
-	}
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Test__Empty_Array()
+        {
+            string[] input  = {};
+            string expected = string.Empty;
+
+            string result = StringUtils.ConcatArrayWithSpace(input);
+
+            Assert.AreEqual(expected, result);
+        }
+    }
 }

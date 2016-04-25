@@ -53,6 +53,7 @@
     <Compile Include="TestCapitalize.cs" />
     <Compile Include="TestConcatArrayWithSpace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestUppercaseFirstEach.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TDD-Homework\TDD-Homework.csproj">

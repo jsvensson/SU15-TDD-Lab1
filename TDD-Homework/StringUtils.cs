@@ -23,7 +23,10 @@ namespace TDD_Homework
                 string word = words[i];
 
                 // Remove numbers
-                word = Regex.Replace(words[i], @"\d*", "");
+                word = Regex.Replace(word, @"\d*", "");
+
+                // Replace periods with underscore
+                word = Regex.Replace(word, @"\.", "_");
 
                 // Capitalize each word (check size if word was a number we just removed)
                 if (word.Length > 0)
@@ -36,6 +39,19 @@ namespace TDD_Homework
             }
 
             return string.Join("", words);
+        }
+
+        public static string UppercaseFirstEach(string[] input)
+        {
+            string[] output = new string[input.Length];
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                string word = input[i];
+                output[i] = char.ToUpper(word[0]) + word.Substring(1);
+            }
+
+            return string.Join(" ", output);
         }
     }
 }
